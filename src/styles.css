@@ -1,1 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* You can add global styles to this file, and also import other style files */
+/* custom file upload
+--------------------------------------------------------------------------------------------------------*/
+.custom-file-upload{position: relative;}
+.custom-file-upload.disabled{cursor: not-allowed;opacity: 0.5;}
+.custom-file-upload>.upload-control{position: absolute;top: 0;left: 0;height: 100%;width: 100%;opacity: 0;display: block;z-index: 1;cursor: pointer;}
+.custom-file-upload>.upload-control[disabled]{cursor: not-allowed;}
+.custom-file-upload>.content{position: relative;z-index: 0;padding: 92px 16px;border:2px dashed #bebebe;text-align: center;line-height: 24px;border-radius: 8px;}
+.custom-file-upload>.content>img{display: block;margin: 0 auto 16px;height: 72px;width: 72px;}
+.custom-file-upload>.content>p{font-size: 16px;}
+.custom-file-upload>.content>span{color:#707070;font-size: 14px;}
+.custom-file-upload>.content>p,.custom-file-upload>.content>span{max-width: 300px;margin: 0 auto;display: block;}
+.custom-file-upload.size-sm>.content{padding-top: 56px;padding-bottom: 56px;}
+
+
+
+/* file upload drag drop
+--------------------------------------------------------------------------------------------------------*/
+.file-upload-drag-drop .inner-block{border:2px dashed #bebebe;padding: 80px 16px;border-radius: 8px;}
+.file-upload-drag-drop .icon-wrapper{border-radius: 8px;width: 320px;max-width: 100%;margin: 0 auto;padding: 20px;border:1px solid #e1e1e1;}
+.file-upload-drag-drop .icon-wrapper>img{display: block;margin: 0 auto;max-width: 100%;height: 128px;width: 128px;}
+.file-upload-drag-drop .file-name{text-align: center;word-break: break-all;padding-top: 16px;color: #3060AA;font-weight: 500;}
+.file-upload-drag-drop .text-block{font-size: 18px;line-height: 24px; display: flex;justify-content: center;padding-top: 48px;}
+.file-upload-drag-drop .text-block>span{align-self:center;-ms-flex-item-align: center;padding-right: 12px;}
+.file-upload-drag-drop .error-text{text-align: center;padding-top: 16px;}
+.file-upload-drag-drop .btn-list{text-align: center;}
+.file-upload-progress-wrapper{padding: 20px 15px;background: #fff;}
+
+

@@ -1,0 +1,18 @@
+<div style="display: grid; place-items: center; top:50%; left:50%; ">
+    <div class="primary-dialog-body">
+        <form [formGroup]="cvForm">
+            <div class="form-group">
+                
+                    <div class="pb-24 pt-88 system-transition ">
+                        <label >CV Content</label>
+                        <textarea  placeholder="Ex. It makes me feel..." formControlName="CVContent"></textarea>
+                        
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  (click)="displayInput()">submit</button>
+                        <!-- apply a submit button using tailwind -->
+                    </div>
+                  
+                </div>
+
+        </form>
+    </div>
+</div>
