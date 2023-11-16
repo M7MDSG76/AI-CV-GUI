@@ -7,6 +7,9 @@ import { CvOptimizerComponent } from './modules/cv-optimizer/cv-optimizer.compon
 import { BasePageComponent } from './modules/shared/components/base-page/base-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransmitionDialogComponent } from './modules/shared/dialogs/transmition-dialog/transmition-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { provideRouter } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,14 @@ import { TransmitionDialogComponent } from './modules/shared/dialogs/transmition
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
 
   ],
-  providers: [],
+  providers: [
+    provideRouter(appRoutes, withViewTransitions())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

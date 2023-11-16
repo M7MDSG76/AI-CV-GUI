@@ -1,7 +1,9 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import Docxtemplater from 'docxtemplater';
 import * as JSZip from 'jszip';
+import { TransmitionDialogComponent } from '../shared/dialogs/transmition-dialog/transmition-dialog.component';
 
 @Component({
   selector: 'app-cv-optimizer',
@@ -10,7 +12,9 @@ import * as JSZip from 'jszip';
 })
 export class CvOptimizerComponent {
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialog,
+  ) { }
 
 
 
@@ -29,6 +33,14 @@ export class CvOptimizerComponent {
     this.error = '';
     console.log(this.cvForm.get('CVContent')?.value)
     
+  }
+  
+  onClick() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.panelClass = ['primary-dialog', 'dialog-lg'];
+    dialogConfig.autoFocus = true;
+    dialogConfig.disableClose = true;
+    const dialogRef = this.dialog.open(TransmitionDialogComponent, dialogConfig);
   }
   displayInput(){
     this.isSubmitted = false;
