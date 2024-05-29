@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "auto-cv-gui:build:production"
+              "buildTarget": "auto-cv-gui:build:production"
             },
             "development": {
-              "browserTarget": "auto-cv-gui:build:development"
+              "buildTarget": "auto-cv-gui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "auto-cv-gui:build"
+            "buildTarget": "auto-cv-gui:build"
           }
         },
         "test": {

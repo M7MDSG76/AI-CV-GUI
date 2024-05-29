@@ -4,6 +4,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import Docxtemplater from 'docxtemplater';
 import * as JSZip from 'jszip';
 import { TransmitionDialogComponent } from '../shared/dialogs/transmition-dialog/transmition-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cv-optimizer',
@@ -14,6 +15,7 @@ export class CvOptimizerComponent {
 
   constructor(
     private dialog: MatDialog,
+    private router: Router,
   ) { }
 
 
@@ -36,11 +38,12 @@ export class CvOptimizerComponent {
   }
   
   onClick() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.panelClass = ['primary-dialog', 'dialog-lg'];
-    dialogConfig.autoFocus = true;
-    dialogConfig.disableClose = true;
-    const dialogRef = this.dialog.open(TransmitionDialogComponent, dialogConfig);
+    // const dialogConfig = new MatDialogConfig();
+    // dialogConfig.panelClass = ['primary-dialog', 'dialog-lg'];
+    // dialogConfig.autoFocus = true;
+    // dialogConfig.disableClose = true;
+    // const dialogRef = this.dialog.open(TransmitionDialogComponent, dialogConfig);
+    this.router.navigate(['cv-optimizer','t-dialog'])
   }
   displayInput(){
     this.isSubmitted = false;

@@ -5,11 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CvOptimizerComponent } from './modules/cv-optimizer/cv-optimizer.component';
 import { BasePageComponent } from './modules/shared/components/base-page/base-page.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransmitionDialogComponent } from './modules/shared/dialogs/transmition-dialog/transmition-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { provideRouter } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,7 @@ import { provideRouter } from '@angular/router';
     MatDialogModule
 
   ],
-  providers: [
-    provideRouter(appRoutes, withViewTransitions())
-  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

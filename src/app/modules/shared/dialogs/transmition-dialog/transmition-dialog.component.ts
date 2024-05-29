@@ -7,10 +7,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class TransmitionDialogComponent {
   constructor(
-    public dialogRef: MatDialogRef<TransmitionDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    // public dialogRef: MatDialogRef<TransmitionDialogComponent>,
+   ) { }
 
     closeDialog(): void {
-      this.dialogRef.close();
+      // this.dialogRef.close();
     }
 }
